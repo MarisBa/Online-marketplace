@@ -1,11 +1,12 @@
 # Online-marketplace
-Online veikals kurā var pirkt vai pārdot preces(līdzīgi kā ebay facebook marketplace)
+Online veikals kurā var pirkt vai pārdot preces(līdzīgi ss.com). Vel pievienotas funkcijas ir tadas, ka pircejs var sazinaties ar tirgotaju un piedavat savu cenu.
 
 Galvenās funkcijas:
-Lietotāju reģistrācija
-Produktu ievietošana pārdevējiem
+Lietotāju reģistrācija un autentifikācija: Lietotāji var viegli izveidot kontu, pieteikties un pārvaldīt savus profilus, lai veiktu pirkumus vai piedāvātu preces pārdošanai.
+Produktu ievietošana: Pārdevēji var vienkārši pievienot savas preces, pievienojot detaļas, attēlus, cenas un aprakstus. Platforma atbalsta dažādu produktu kategoriju izveidi, lai lietotāji varētu ātri atrast to, ko meklē.
 Meklēšana un filtrēšana produktu
 Iepirkumu grozs
+Administrācijas panelis: Administratori var pārvaldīt visu platformas saturu, kontrolēt lietotāju piekļuvi, uzraudzīt darījumus un risināt problēmas.
 
 Lietotāji:
 Administrators
@@ -14,7 +15,7 @@ Klienti (Pircēji)
 
 
 Izmantotās tehnoloģijas:
-Backend - Laravel
+Backend - Laravel, PHP
 Front end - Vue.js
 Datu bāze: MySQL
 
