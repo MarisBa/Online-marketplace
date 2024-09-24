@@ -6,14 +6,38 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+.main-content {
+    background: var(--background-color);
+    color: var(--text-color);
 }
 
+button {
+    color: var(--text-color);
+}
+
+:root {
+    --dark-background-color: #111111;
+    --dark-text-color: #eeeeee;
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+    --text-color: var(dark-text-color);
+}
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+        --text-color: var(--dark-text-color);
+    }
+}
 /* Header */
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-    text-align: center;
 }
 
 header h1 {
@@ -24,7 +48,28 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    color: #fff;
+
+}
+
+
+nav .nav-button{
+    display: block;
+    width: 100%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+nav .nav-button:hover {
+    background-color: #555;
+    transform: scale(1.05);
 }
 
 nav ul li {
@@ -183,4 +228,25 @@ footer {
     font-weight: bold; /* Make the price text bolder */
     color: #333;
     text-align: center;
+}
+
+@media screen and (min-width: 600px) and (orientation: landscape) {
+    body {
+      color: blue;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    /* Styles for viewports that are at least 800px wide */
+    .card {
+        background-color: #f0f0f0;
+    }
+
+    .card p.price {
+        color: #000;
+    }
+
+    body {
+        font-size: 18px;
+    }
 }

@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css"> 
     <title>Hover Cards Example</title>
 
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><button class="nav-button"><i class="fa fa-home"></i> Home</button></li>
+                <li><button class="nav-button"><i class="fa fa-newspaper-o"></i> News</button></li>
+                <li><button class="nav-button"><i class="fa fa-address-book-o"></i> Contacts</button></li>
+                <li><button class="nav-button"><i class="fa fa-info-circle"></i> About</button></li>
+            </ul>
+            <select id="theme">
+                <option value="auto">Auto</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </nav>
+    </header>
     <div class="container">
         <!-- Card 1 -->
         <div class="card">
@@ -35,6 +51,20 @@
             <p class="price">Price: 12000</p>
             <button>Buy Now</button>
         </div>
+        
     </div>
+    <script>
+
+function applyTheme(theme) {
+    document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+    document.body.classList.add(`theme-${theme}`);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+   document.querySelector("#theme").addEventListener("change", function() {
+        applyTheme(this.value);
+   });
+});
+    </script>
 </body>
 </html>
