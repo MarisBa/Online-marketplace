@@ -11,7 +11,12 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
                 <li><button class="nav-button">Home</button></li>
                 <li><button class="nav-button">About</button></li>
                 <li><button class="nav-button">Contact</button></li>
@@ -27,6 +32,7 @@
             </ul>
         </nav>
     </header>
+    
     <div class="container">
         <!-- Card 1 -->
         <div class="card">
@@ -157,6 +163,12 @@
            var element = document.body;
            element.classList.toggle("dark-mode");
         }
+
+        function toggleMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+
         </script>
 </body>
 </html>
