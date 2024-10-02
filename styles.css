@@ -523,18 +523,126 @@ body.online-shop-page footer p {
 }
 
 /* Responsive adjustments */
+/* Mobile Styles for Hover Card Page */
 @media (max-width: 768px) {
-    body.online-shop-page .container {
-        flex-direction: column;
+    /* Header adjustments */
+    header {
+        padding: 15px 0; /* Reduce header padding */
     }
 
-    body.online-shop-page main {
-        padding-right: 0;
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center; /* Center items */
+        padding: 10px; /* Add padding */
+        margin: 0;
+    }
+
+    nav .nav-button {
+        margin: 10px 0; /* Space between navigation buttons */
+    }
+
+    /* Container adjustments */
+    .container {
+        flex-direction: column; /* Stack cards vertically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    /* Card adjustments */
+    .card {
+        width: 100%; /* Full width for cards on mobile */
+        margin: 10px 0; /* Vertical margin between cards */
+        padding: 20px; /* Adjust card padding */
+    }
+
+    .card img {
+        max-width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .card h1 {
+        font-size: 24px; /* Decrease title font size */
+    }
+
+    .card p {
+        font-size: 16px; /* Decrease paragraph font size */
+    }
+
+    .card .price {
+        font-size: 18px; /* Decrease price font size */
+    }
+
+    /* Button adjustments */
+    .card button {
+        width: 100%; /* Full width for buttons */
+        padding: 12px; /* Adjust button padding */
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        width: 90%; /* Reduce modal width */
+        max-width: 90%; /* Ensure modal is responsive */
+    }
+
+    .close {
+        font-size: 24px; /* Adjust close button size */
+    }
+
+    /* Hamburger menu */
+    .hamburger {
+        display: flex; /* Show hamburger icon on mobile */
+    }
+
+    /* Hide nav links by default */
+    .nav-links {
+        display: none; /* Initially hide navigation links */
+        flex-direction: column; /* Stack links */
+        width: 100%; /* Full width for links */
+    }
+
+    /* Show nav links when the menu is toggled */
+    .nav-links.show {
+        display: flex; /* Show navigation links */
     }
 }
+
 
 body.online-shop-page .shop-logo {
     max-width: 200px; /* Adjust the max width as needed */
     height: auto; /* Keep the aspect ratio intact */
     margin-bottom: 20px; /* Add space below the logo */
+}
+
+/* Dark mode modal styles */
+body.dark-mode .modal-content {
+    background-color: #2a2a2a; /* Darker background for modal */
+    color: #ffffff; /* Light text color */
+    border: 1px solid #444; /* Optional: darker border */
+}
+
+body.dark-mode .modal-content h1,
+body.dark-mode .modal-content p {
+    color: #ffffff; /* Ensure headings and paragraph text are white */
+}
+
+/* Close button in dark mode */
+body.dark-mode .close {
+    color: #ffffff; /* Close button text color */
+}
+
+body.dark-mode .close:hover,
+body.dark-mode .close:focus {
+    color: #ccc; /* Change close button color on hover */
+}
+
+/* CSS to remove blue text and underline from links */
+.nav-button {
+    color: inherit; /* Use the current text color */
+    text-decoration: none; /* Remove underline */
+    background: none; /* Remove button background */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.nav-button:hover {
+    text-decoration: underline; /* Optional: underline on hover */
 }
