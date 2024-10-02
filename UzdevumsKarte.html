@@ -6,9 +6,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css"> 
     <title>Hover Cards Example</title>
-
 </head>
-<body>
+<body class="hover-cards-page">
     <header>
         <nav>
             <div class="hamburger" onclick="toggleMenu()">
@@ -32,84 +31,83 @@
             </ul>
         </nav>
     </header>
-    
+
     <div class="container">
         <!-- Card 1 -->
         <div class="card">
-            <img src="https://ap.rdcpix.com/2b8856f7c60dae0ca2af85ca8136e5f6l-m3788099012rd-w960_h720.webp" alt="Product 1">
-            <h1>Home</h1>
+            <img src="https://ap.rdcpix.com/2b8856f7c60dae0ca2af85ca8136e5f6l-m3788099012rd-w960_h720.webp" alt="Modern Home">
+            <h1>Modern Home</h1>
             <p>A modern home is designed with a focus on clean lines, minimalist aesthetics, and functional living spaces.</p>
-            <p class="price">Price: 2000000$</p>
+            <p class="price">Price: $2,000,000</p>
             <button id="learnMoreBtnHouse">Learn more</button>
         </div>
-        <!-- The Modal -->
+        <!-- Modal for Card 1 -->
         <div id="myModalHouse" class="modal">
-            <!-- Modal content -->
             <div class="modal-content-first">
                 <span class="close" data-modal="myModalHouse">&times;</span>
-                <p class="modal-text">This stunning brick and cedar home sits high on a hill, backing onto Camp Miakonda. It's a blend of contemporary design and high functionality, offering massive room sizes and outdoor areas accessible from the interior.</p>
-                <p class="modal-text">The house includes a new kitchen with Viking appliances, luxury cabinetry, an island, granite countertops, and a slider leading to the outdoor space.</p>
-                <p class="modal-text">Key Specifications:</p>
+                <h2>Modern Home Details</h2>
+                <p class="modal-text">This stunning brick and cedar home features a blend of contemporary design and traditional materials. It includes 4 spacious bedrooms, open-plan living areas, and modern amenities.</p>
                 <ul class="modal-text">
                     <li>Bedrooms: 4</li>
-                    <li>Primary Bedroom: 18 x 16 (Main Level)</li>
-                    <li>Total Bathrooms: 5 (2 Full, 3 Half)</li>
-                    <li>Living Room: 34 x 24</li>
-                    <li>Game/Recreation Room: 33 x 25 (Lower Level)</li>
+                    <li>Bathrooms: 5 (2 Full, 3 Half)</li>
                     <li>Price: $2,000,000</li>
+                    <li>Location: Suburban neighborhood</li>
+                    <li>Square Footage: 3,500 sq ft</li>
                 </ul>
+                <p>This home is perfect for a growing family or someone who values open space and modern design. The backyard features a beautiful garden and a pool, ideal for relaxing and hosting outdoor gatherings.</p>
             </div>
         </div>
-
 
         <!-- Card 2 -->
         <div class="card">
-            <img src="https://projectaero.com.au/cdn/shop/products/ProjectAero_MitsubishiEvo8_CompleteSplitterKi_LRt.jpg?v=1626065318" alt="Product 2">
-            <h1>Evo 8</h1>
-            <p>The Mitsubishi Evo 8 is a high-performance sports sedan known for its turbocharged engine, all-wheel drive system, and rally-inspired design, offering exceptional handling and speed.</p>
-            <p class="price">Price: 23000$</p>
+            <img src="https://projectaero.com.au/cdn/shop/products/ProjectAero_MitsubishiEvo8_CompleteSplitterKi_LRt.jpg?v=1626065318" alt="Mitsubishi Evo 8">
+            <h1>Mitsubishi Evo 8</h1>
+            <p>The Mitsubishi Evo 8 is a high-performance sports sedan known for its turbocharged engine and precision handling.</p>
+            <p class="price">Price: $23,000</p>
             <button id="learnMoreBtnEvo">Learn more</button>
         </div>
-        <!-- The Modal -->
+        <!-- Modal for Card 2 -->
         <div id="myModalEvo8" class="modal">
-            <!-- Modal content -->
             <div class="modal-content-first">
                 <span class="close" data-modal="myModalEvo8">&times;</span>
-                <p class="modal-text">The Mitsubishi Lancer Evolution VIII, commonly known as the Evo 8, is a legendary high-performance sedan that debuted in 2003.</p>
-                <p class="modal-text">It features a turbocharged 2.0-liter inline-four engine, all-wheel drive, and a rally-inspired design that has made it a favorite among car enthusiasts.</p>
-                <p class="modal-text">Key Specifications:</p>
+                <h2>Mitsubishi Evo 8 Details</h2>
+                <p class="modal-text">The Mitsubishi Lancer Evolution VIII (Evo 8) is a renowned high-performance car from the Japanese automaker Mitsubishi. It combines rally-bred technology with an aggressive road presence.</p>
                 <ul class="modal-text">
                     <li>Engine: 2.0L Turbocharged Inline-4</li>
                     <li>Horsepower: 276 hp</li>
-                    <li>Torque: 286 lb-ft</li>
                     <li>0-60 mph: 4.9 seconds</li>
+                    <li>Price: $23,000</li>
+                    <li>Transmission: 5-speed manual</li>
                 </ul>
-            </div>
-        </div>
-        
-        <!-- Card 3 -->
-        <div class="card">
-            <img src="https://images.squarespace-cdn.com/content/v1/546a6960e4b02520b106a456/1417721734709-4HTG6MKT2MNOKOYB8D2N/IMG_2456.JPG?format=2500w" alt="Product 3">
-            <h1>Yamaha r6</h1>
-            <p>High high-performance sports bike</p>
-            <p class="price">Price: 12000$</p>
-            <button id="learnMoreBtnR6">Learn more</button>
-        </div>
-        
-        <!-- The Modal -->
-        <div id="myModalR6" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close" data-modal="myModalR6">&times;</span>
-                <p class="modal-text">The Yamaha YZF-R6 is a highly regarded supersport motorcycle, known for its precision handling, sleek design, and powerful performance. Introduced in 1999, it quickly became a favorite among racing enthusiasts and sportbike riders alike. Here are key highlights:</p>
-                <ul class="modal-text">
-                    <li>Engine: The R6 features a 599cc inline four-cylinder engine, which delivers exceptional power, especially in the high-rev range. It offers thrilling acceleration and a top-end performance perfect for the track.</li>
-                    <li>Design: The R6 boasts a sleek and aerodynamic design, with aggressive styling that reflects its racing pedigree. Its lightweight frame and advanced suspension system provide exceptional handling and stability.</li>
-                    <li>Technology: Equipped with advanced electronics, including a quick shifter, traction control, and multiple riding modes, the R6 offers a customizable and exhilarating riding experience.</li>
-                </ul>
+                <p>This car is a favorite among car enthusiasts for its powerful acceleration, all-wheel drive system, and ability to handle tight corners with ease. It's a thrilling choice for those who want speed and control in one package.</p>
             </div>
         </div>
 
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://images.squarespace-cdn.com/content/v1/546a6960e4b02520b106a456/1417721734709-4HTG6MKT2MNOKOYB8D2N/IMG_2456.JPG?format=2500w" alt="Yamaha R6">
+            <h1>Yamaha R6</h1>
+            <p>The Yamaha YZF-R6 is a high-performance sportbike designed for the racetrack, featuring advanced engineering for speed and control.</p>
+            <p class="price">Price: $12,000</p>
+            <button id="learnMoreBtnR6">Learn more</button>
+        </div>
+        <!-- Modal for Card 3 -->
+        <div id="myModalR6" class="modal">
+            <div class="modal-content">
+                <span class="close" data-modal="myModalR6">&times;</span>
+                <h2>Yamaha R6 Details</h2>
+                <p class="modal-text">The Yamaha YZF-R6 is a racing-inspired sportbike that has dominated the Supersport category for years. It features a powerful 599cc inline 4-cylinder engine and a lightweight chassis for superior handling.</p>
+                <ul class="modal-text">
+                    <li>Engine: 599cc inline 4-cylinder</li>
+                    <li>Horsepower: 116 hp</li>
+                    <li>Weight: 419 lbs (wet)</li>
+                    <li>Price: $12,000</li>
+                    <li>Top Speed: 160 mph</li>
+                </ul>
+                <p>The Yamaha R6 is perfect for those who love pushing their limits on the racetrack. Its precision handling and high-revving engine deliver an adrenaline-filled ride every time you take it out.</p>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Function to open modal
@@ -124,51 +122,27 @@
             modal.style.display = "none";
         }
 
-       // Attach click event to Evo 8 button
-        document.getElementById('learnMoreBtnEvo').onclick = function() {
-            openModal('myModalEvo8'); // Make sure this targets the correct modal
-        }
+        // Attach click event to each button
+        document.getElementById('learnMoreBtnEvo').onclick = function() { openModal('myModalEvo8'); }
+        document.getElementById('learnMoreBtnR6').onclick = function() { openModal('myModalR6'); }
+        document.getElementById('learnMoreBtnHouse').onclick = function() { openModal('myModalHouse'); }
 
-
-        // Attach click event to R6 button
-        document.getElementById('learnMoreBtnR6').onclick = function() {
-            openModal('myModalR6');
-        }
-        
-
-        // Attach click event to R6 button
-        document.getElementById('learnMoreBtnHouse').onclick = function() {
-            openModal('myModalHouse');
-        }
-
-        // Get all <span> elements that close modals
-        var closeSpans = document.querySelectorAll('.close');
-
-        // Attach click event to each <span> for closing modals
-        closeSpans.forEach(function(span) {
+        // Close modals when clicking the close button
+        document.querySelectorAll('.close').forEach(function(span) {
             span.onclick = function() {
-                var modalId = span.getAttribute('data-modal');
-                closeModal(modalId);
-            }
+                closeModal(span.getAttribute('data-modal'));
+            };
         });
 
-        // When the user clicks anywhere outside of the modal, close it
+        // Close modal when clicking outside of it
         window.onclick = function(event) {
             if (event.target.classList.contains('modal')) {
                 closeModal(event.target.id);
             }
-        }
+        };
 
-        function myFunction() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
-        }
-
-        function toggleMenu() {
-            var navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('show');
-        }
-
-        </script>
+        function myFunction() { document.body.classList.toggle("dark-mode"); }
+        function toggleMenu() { document.querySelector('.nav-links').classList.toggle('show'); }
+    </script>
 </body>
 </html>

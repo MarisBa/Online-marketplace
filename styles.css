@@ -375,3 +375,160 @@ nav ul {
         margin: 10px 0;
     }
 }
+/* Scoped styles for the online shop page */
+body.online-shop-page {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body.online-shop-page header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+body.online-shop-page header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+body.online-shop-page nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body.online-shop-page nav ul li {
+    margin-right: 20px;
+}
+
+body.online-shop-page nav ul li:last-child {
+    margin-right: 0;
+}
+
+body.online-shop-page nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+body.online-shop-page nav ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Main container for online shop page */
+body.online-shop-page .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+body.online-shop-page main {
+    flex: 3;
+    padding-right: 20px;
+}
+
+body.online-shop-page main h1,
+body.online-shop-page main h2 {
+    color: #34495e;
+}
+
+/* Card section for online shop */
+body.online-shop-page .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+body.online-shop-page .card:hover {
+    transform: scale(1.05);
+}
+
+body.online-shop-page .card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+body.online-shop-page .card h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+body.online-shop-page .card p {
+    font-size: 16px;
+    color: #666;
+}
+
+body.online-shop-page .card .price {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+body.online-shop-page .card button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+body.online-shop-page .card button:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+body.online-shop-page .card button:active {
+    background-color: #777;
+    transform: scale(1);
+}
+
+/* Footer styles for online shop page */
+body.online-shop-page footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+body.online-shop-page footer a.footer-link {
+    color: #e74c3c;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+body.online-shop-page footer a.footer-link:hover {
+    text-decoration: underline;
+}
+
+body.online-shop-page footer p {
+    margin: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body.online-shop-page .container {
+        flex-direction: column;
+    }
+
+    body.online-shop-page main {
+        padding-right: 0;
+    }
+}
