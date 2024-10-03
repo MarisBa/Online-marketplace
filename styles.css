@@ -699,6 +699,7 @@ body.contact-page .sun{
 
 input:checked ~ .sun {
     transform: scale(1) rotate(360deg);
+    transition-delay: .8s;
 }
 
 body.contact-page .moon {
@@ -706,9 +707,11 @@ body.contact-page .moon {
     color: #666;
     filter: drop-shadow(0 0 2px rgba(0, 0, 0, .5));
     transition: 1s ease;
+    transition-delay: .8s;
 }
 
 input:checked ~ .moon {
+    transition-delay: 0s;
     transform: rotate(360deg) scale(0);
 }
 
@@ -728,4 +731,18 @@ body.contact-page .toggle {
 
 body.contact-page input:checked ~ .toggle {
     background-color: #f8f8f8;
+}
+
+body.contact-page .animateBg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8;
+    z-index: -2;
+    clip-path: circle(0% at 50% 50%);
+}
+
+input:checked ~ .animateBg {
+    clip-path: circle(70.7% at 50% 50%);
+
 }
