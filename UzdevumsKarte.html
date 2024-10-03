@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css"> 
     <title>Hover Cards Example</title>
 </head>
@@ -27,7 +28,11 @@
                         <a href="#">Service 3</a>
                     </div>
                 </li>
-                <li><button onclick="myFunction()" class="nav-button">Toggle dark mode</button></li>
+                <li>
+                    <button onclick="myFunction()" class="nav-button">
+                        <i class="fa-regular fa-moon"></i>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -36,7 +41,7 @@
         <!-- Card 1 -->
         <div class="card">
             <img src="https://ap.rdcpix.com/2b8856f7c60dae0ca2af85ca8136e5f6l-m3788099012rd-w960_h720.webp" alt="Modern Home">
-            <h1>Modern Home</h1>
+            <h1 class="product-name">Modern Home</h1>
             <p>A modern home is designed with a focus on clean lines, minimalist aesthetics, and functional living spaces.</p>
             <p class="price">Price: $2,000,000</p>
             <button id="learnMoreBtnHouse">Learn more</button>
@@ -61,7 +66,7 @@
         <!-- Card 2 -->
         <div class="card">
             <img src="https://projectaero.com.au/cdn/shop/products/ProjectAero_MitsubishiEvo8_CompleteSplitterKi_LRt.jpg?v=1626065318" alt="Mitsubishi Evo 8">
-            <h1>Mitsubishi Evo 8</h1>
+            <h1 class="product-name">Mitsubishi Evo 8</h1>
             <p>The Mitsubishi Evo 8 is a high-performance sports sedan known for its turbocharged engine and precision handling.</p>
             <p class="price">Price: $23,000</p>
             <button id="learnMoreBtnEvo">Learn more</button>
@@ -86,7 +91,7 @@
         <!-- Card 3 -->
         <div class="card">
             <img src="https://images.squarespace-cdn.com/content/v1/546a6960e4b02520b106a456/1417721734709-4HTG6MKT2MNOKOYB8D2N/IMG_2456.JPG?format=2500w" alt="Yamaha R6">
-            <h1>Yamaha R6</h1>
+            <h1 class="product-name">Yamaha R6</h1>
             <p>The Yamaha YZF-R6 is a high-performance sportbike designed for the racetrack, featuring advanced engineering for speed and control.</p>
             <p class="price">Price: $12,000</p>
             <button id="learnMoreBtnR6">Learn more</button>

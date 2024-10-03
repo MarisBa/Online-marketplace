@@ -186,7 +186,6 @@ footer {
     font-weight: bold;
 }
 
-/* Button inside card */
 .card button {
     display: block;
     margin: 15px auto;
@@ -204,12 +203,6 @@ footer {
     background-color: #555;
     transform: scale(1.05);
 }
-
-.card button:active {
-    background-color: #777;
-    transform: scale(1);
-}
-
 /* Dark mode styles */
 body.dark-mode {
     background-color: #121212;
@@ -258,6 +251,29 @@ body.dark-mode .card button:hover {
 
 body.dark-mode .card button:active {
     background-color: #888;
+}
+
+body.dark-mode .modal-content,
+body.dark-mode .modal-content-first {
+    background-color: #1e1e1e; /* Darker background for modal */
+    color: #e0e0e0; /* Light grey text for better readability */
+    border: 1px solid #444; /* Border color for better contrast */
+}
+
+body.dark-mode .modal-text {
+    color: #e0e0e0; /* Light grey text for better readability */
+}
+
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 @keyframes slideUp {
     from {
