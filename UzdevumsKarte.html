@@ -11,11 +11,11 @@
 <body class="hover-cards-page">
     <header>
         <nav>
-            <div class="hamburger" onclick="toggleMenu()">
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <div class="bar"></div>
                 <div class="bar"></div>
                 <div class="bar"></div>
-            </div>
+            </div>            
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-button">Home</a></li>
                 <li><button class="nav-button">About</button></li>
@@ -28,11 +28,12 @@
                         <a href="#">Service 3</a>
                     </div>
                 </li>
-                <li>
-                    <button onclick="myFunction()" class="nav-button">
-                        <i class="fa-regular fa-moon"></i>
-                    </button>
-                </li>
+                <label class="dark-mode-toggle nav-button">
+                    <input type="checkbox">
+                    <ion-icon name="sunny" class="sun"></ion-icon>
+                    <ion-icon name="moon" class="moon"></ion-icon>
+                    <span class="toggle"></span>
+                </label>
             </ul>
         </nav>
     </header>
@@ -146,8 +147,22 @@
             }
         };
 
-        function myFunction() { document.body.classList.toggle("dark-mode"); }
-        function toggleMenu() { document.querySelector('.nav-links').classList.toggle('show'); }
+        function myFunction() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        // Attach event to the dark mode toggle checkbox
+        document.querySelector('.dark-mode-toggle input').addEventListener('change', myFunction);
+
+        function toggleMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            hamburger.classList.toggle('open'); // Toggle the open class for animation
+            navLinks.classList.toggle('show'); // Toggle the navigation display
+        }
     </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
