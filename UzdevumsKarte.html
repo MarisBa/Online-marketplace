@@ -116,17 +116,27 @@
     </div>
 
     <script>
-        // Function to open modal
+        // Function to open modal with animation
+        // Function to open modal with animation
         function openModal(modalId) {
             var modal = document.getElementById(modalId);
-            modal.style.display = "block";
+            modal.style.display = "flex"; // Set display to flex to make it visible
+            setTimeout(function () {
+                modal.classList.add("show"); // Add 'show' class to trigger animation
+            }, 10); // Small delay to ensure the animation works
         }
 
-        // Function to close modal
+        // Function to close modal with animation
         function closeModal(modalId) {
             var modal = document.getElementById(modalId);
-            modal.style.display = "none";
+            modal.classList.remove("show"); // Remove 'show' class to start fade-out
+            setTimeout(function () {
+                modal.style.display = "none"; // Hide modal after animation finishes
+            }, 500); // Delay matches the animation duration (0.5s)
         }
+
+
+
 
         // Attach click event to each button
         document.getElementById('learnMoreBtnEvo').onclick = function() { openModal('myModalEvo8'); }
@@ -155,12 +165,15 @@
         document.querySelector('.dark-mode-toggle input').addEventListener('change', myFunction);
 
         function toggleMenu() {
-            const hamburger = document.getElementById('hamburger');
-            const navLinks = document.querySelector('.nav-links');
-            
-            hamburger.classList.toggle('open'); // Toggle the open class for animation
-            navLinks.classList.toggle('show'); // Toggle the navigation display
-        }
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const container = document.querySelector('.container');
+    
+    hamburger.classList.toggle('open'); // Toggle the open class for hamburger
+    navLinks.classList.toggle('show'); // Show/hide the navigation links
+    container.classList.toggle('nav-open'); // Push the container down when nav is open
+}
+
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -333,46 +333,44 @@ body.dark-mode .modal-text {
     }
 }
 
+/* Modal container */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
+    z-index: 1000;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    animation: slideUp 0.5s forwards;
+    justify-content: center;
+    align-items: center; /* Center the modal vertically */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease; /* Fade-in/out transition */
 }
 
-.modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    animation: slideUp 0.5s forwards;
-}
-
+/* Modal content with slide-up animation */
+.modal-content,
 .modal-content-first {
     background-color: #fff;
-    margin: auto;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 10px;
     width: 80%;
     max-width: 600px;
-    border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    animation: slideUp 0.5s forwards;
+    transform: translateY(30px); /* Start from below */
+    animation: slideUp 0.5s forwards; /* Add slide-up animation */
 }
+
+/* Modal open state with fade-in */
+.modal.show {
+    display: flex; /* Flexbox for centering */
+    opacity: 1; /* Fade in */
+}
+
+
 
 .close {
     color: #aaa;
@@ -418,37 +416,37 @@ body.dark-mode .modal-text {
 }
 
 /* Media Query for Mobile View */
+
 @media (max-width: 768px) {
-    /* Existing styles */
     .hamburger {
-        display: flex; /* Show hamburger on smaller screens */
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        z-index: 11; /* Ensure the hamburger stays on top */
     }
 
-        /* Mobile Menu Styles */
-.nav-links {
-    display: none; /* Hide initially */
-    flex-direction: column; /* Stack links vertically */
-    width: 100%; /* Full width */
-    position: absolute; /* Positioning for sliding effect */
-    top: 60px; /* Adjust based on header height */
-    left: 0;
-    background-color: #333; /* Background for nav links */
-    color: #fff; /* Text color for nav links */
-    align-items: center; /* Center items horizontally */
-    z-index: 10; /* Ensure it stays above other content */
-}
+    .nav-links {
+        display: none; /* Hide initially */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        color: #fff;
+        align-items: center;
+        z-index: 10; /* Ensure it stays above content */
+    }
 
-/* Show nav links when the menu is toggled */
-.nav-links.show {
-    display: flex; /* Show navigation links */
-    animation: slideDown 0.3s ease forwards; /* Add slide down animation */
-}
+    .nav-links.show {
+        display: flex; /* Show the links when toggled */
+    }
 
-/* Main container moves down */
-.nav-links.show ~ .container {
-    margin-top: 60px; /* Adjust based on nav height */
-}
-
+    /* Push the container down when nav is opened */
+    .container.nav-open {
+        margin-top: 220px; /* Adjust based on the size of the nav */
+    }
 }
 
 
