@@ -70,6 +70,8 @@ nav .nav-button:active {
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 5px; /* Added rounded corners */
+    transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 /* Dropdown content (hidden by default) */
@@ -78,8 +80,12 @@ nav .nav-button:active {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 5px; /* Rounded corners */
+    opacity: 0; /* Initially transparent */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animation for opacity and transform */
+    transform: translateY(-10px); /* Slightly lifted */
 }
 
 /* Links inside the dropdown */
@@ -98,7 +104,28 @@ nav .nav-button:active {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* Move to original position */
 }
+
+/* Optional: Add a transition when showing and hiding the dropdown */
+.dropdown-content.show {
+    display: block;
+    animation: fadeIn 0.3s forwards; /* Add fade in effect when shown */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px); /* Start from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
 
 /* Main container for content */
 .container {
