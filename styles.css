@@ -5,6 +5,8 @@ body {
     padding: 0;
     background-color: #fff;
     color: #333;
+    height: 100%;
+    margin: 0;
 }
 
 /* Header */
@@ -126,52 +128,91 @@ nav .nav-button:active {
     }
 }
 
-
-/* Main container for content */
 .container {
     display: flex;
+    justify-content: center; /* Center the container contents */
+    align-items: flex-start; /* Align items at the start vertically */
+}
+
+.content {
+    display: flex; /* Enable flexbox for horizontal arrangement */
     flex-wrap: wrap; /* Allow wrapping of cards */
-    justify-content: center; /* Center align cards horizontally */
-    padding: 0; /* Remove any padding */
-    margin: 0 auto; /* Center container */
+    justify-content: center; /* Center the cards horizontally */
+    gap: 20px; /* Space between cards */
+    flex: 1; /* Allow content to take remaining space */
+    margin-right: -300px;
 }
 
-/* Main section */
-main {
-    flex: 3;
+.card {
+    flex: 0 0 300px; /* Width of each card (adjust as needed) */
+    min-width: 300px; /* Minimum width for responsiveness */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
 }
 
-/* Sidebar */
-aside {
-    flex: 1;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-left: 1px solid #ddd;
+.sidebar {
+    width: 250px; /* Width of the aside */
+    background-color: #fff; /* White background for a clean look */
+    padding: 15px; /* Increased padding for better spacing */
+    border-left: 2px solid #ccc; /* Subtle border for definition */
+    margin: 0 20px; /* Adjusted margin for spacing */
+    height: fit-content; /* Adjust height based on content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners */
 }
 
-aside ul {
-    list-style: none;
-    padding: 0;
+.sidebar h2 {
+    margin-top: 0; /* Remove top margin */
+    font-size: 1.5em; /* Slightly larger font size for heading */
+    color: #333; /* Darker text color */
 }
 
-aside ul li {
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+.sidebar p {
+    line-height: 1.6; /* Improved readability */
+    color: #555; /* Medium gray text color */
 }
 
-aside ul li:hover {
-    background-color: #f9f9f9;
+.sidebar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
 }
 
-/* Footer */
+.sidebar ul li {
+    margin: 10px 0; /* Space between list items */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Black link color */
+    transition: color 0.3s, transform 0.3s; /* Smooth color and transform transition */
+}
+
+.sidebar ul li a:hover {
+    color: #444; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Dark mode styles */
+.dark-mode .sidebar {
+    background-color: #333; /* Dark background */
+    border-left: 1px solid #555; /* Darker border */
+}
+
+.dark-mode .sidebar h2,
+.dark-mode .sidebar p {
+    color: #fff; /* Light text color */
+}
+
+
+
+/* Footer styling */
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
+    padding: 10px;
     text-align: center;
-    padding: 10px 0;
+    /* Ensure it sticks to the bottom */
     width: 100%;
 }
 
@@ -447,6 +488,44 @@ body.dark-mode .modal-text {
     .container.nav-open {
         margin-top: 220px; /* Adjust based on the size of the nav */
     }
+    /* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width on mobile */
+        margin: 0; /* Remove margins for better fit */
+        border-left: none; /* Remove border for simplicity */
+        border-radius: 0; /* Remove rounded corners */
+        box-shadow: none; /* Remove shadow for a flatter look */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .container {
+        flex-direction: column; /* Stack container elements vertically */
+        align-items: center; /* Center items */
+        margin: 0; /* Remove negative margins */
+    }
+
+    .content {
+        margin-right: 0; /* Remove margin-right for mobile view */
+    }
+
+    .card {
+        width: 90%; /* Adjust card width for mobile */
+        margin: 10px 0; /* Adjust margin between cards */
+    }
+
+    /* Adjustments for navigation */
+    nav .nav-button {
+        width: 100%; /* Full width for buttons */
+        margin: 5px 0; /* Margin for spacing */
+    }
+
+    /* Hamburger menu adjustments */
+    .nav-links {
+        top: 50px; /* Position below the header */
+    }
+}
+
 }
 
 
