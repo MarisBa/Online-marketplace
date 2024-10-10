@@ -667,10 +667,18 @@ body.dark-mode .close:focus {
 
 .card img {
     border-radius: 10px;
-    max-width: 100%;
-    height: auto;
+    width: 100%; /* Make image take full width of the card */
+    height: 250px; /* Fixed height for the images */
+    object-fit: cover; /* Cover to maintain aspect ratio */
 }
 
+.card:hover .card-image1 {
+    content: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDd1aWQyZXh4MWxpYXo4YnN4bW11ZHZvZGo0M3BnNWQ5cTVncGZiZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ilNekEJsMscsn2bLlO/giphy.webp'); /* Replace with the actual GIF URL */
+}
+
+.card:hover .card-image2 {
+    content: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGdoMThxbWtvbzM2dWtvYjZhdXJkd3A3cXZxcHowa245bmx3ZjhvMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m946j0SLMqOrl0e1PH/giphy.webp'); /* Replace with the actual GIF URL */
+}
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
